@@ -1,0 +1,5 @@
+{
+  "name": "Middle-Earth SBG Unit Browser",
+  "description": "An application to browse and filter unit profiles for the Middle-Earth Strategy Battle Game.",
+  "requestFramePermissions": []
+}
