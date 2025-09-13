@@ -6,36 +6,59 @@
     <title>Middle-Earth SBG Unit Browser</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'brand-bg': '#1a202c',
-            'brand-surface': '#2d3748',
-            'brand-primary': '#a0aec0',
-            'brand-secondary': '#718096',
-            'brand-text': '#e2e8f0',
-            'brand-text-dim': '#a0aec0',
-            'alignment-good': '#3b82f6',
-            'alignment-evil': '#ef4444',
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-bg': '#1a202c',
+              'brand-surface': '#2d3748',
+              'brand-primary': '#f6e05e',
+              'brand-secondary': '#4a5568',
+              'brand-text': '#e2e8f0',
+              'brand-text-dim': '#a0aec0',
+              'alignment-good': '#48bb78',
+              'alignment-evil': '#f56565',
+            }
           }
         }
       }
-    }
     </script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+      body {
+        scrollbar-width: thin;
+        scrollbar-color: #4a5568 #2d3748;
+      }
+      body::-webkit-scrollbar {
+        width: 8px;
+      }
+      body::-webkit-scrollbar-track {
+        background: #2d3748;
+      }
+      body::-webkit-scrollbar-thumb {
+        background-color: #4a5568;
+        border-radius: 10px;
+        border: 2px solid #2d3748;
+      }
+    </style>
 <script type="importmap">
 {
   "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
-    "react/": "https://aistudiocdn.com/react@^19.1.1/",
-    "react": "https://aistudiocdn.com/react@^19.1.1"
+    "react/": "https://aistudiocdn.com/react@^19.1.1/"
   }
 }
 </script>
 </head>
 <body class="bg-brand-bg text-brand-text">
     <div id="root"></div>
-    <script type="text/babel" data-type="module" src="/index.tsx"></script>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom-development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel" src="./index.tsx"></script>
+    
+    <noscript>You need to enable JavaScript to run this app.</noscript>
 </body>
 </html>
